@@ -3,7 +3,7 @@ import {localPushNotification} from '../notifications/notification';
 
 class FCMService {
     register = () => {
-        //
+        this.foregroundNotification();
     };
 
     requestUserPermission = async () => {

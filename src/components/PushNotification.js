@@ -5,7 +5,7 @@ import LocalNotification from '../services/LocalNotification';
 
 class PushNotification extends Component {
     componentDidMount() {
-        FCMService.foregroundNotification();
+        FCMService.register();
     }
 
     popNotification() {
