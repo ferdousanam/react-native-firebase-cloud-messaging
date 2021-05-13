@@ -9,4 +9,4 @@ class LocalNotification {
     }
 }
 
-export default LocalNotification;
+export default new LocalNotification();

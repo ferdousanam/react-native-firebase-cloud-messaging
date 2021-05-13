@@ -48,4 +48,4 @@ class FCMService {
     }
 }
 
-export default FCMService;
+export default new FCMService();

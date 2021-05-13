@@ -1,22 +1,22 @@
 import React, {Component} from 'react';
 import {Button, StyleSheet, ToastAndroid, View} from 'react-native';
-import LocalNotification from '../services/LocalNotification';
 import FCMService from '../services/FCMService';
+import LocalNotification from '../services/LocalNotification';
 
 class PushNotification extends Component {
     componentDidMount() {
-        new FCMService().foregroundNotification();
+        FCMService.foregroundNotification();
     }
 
     popNotification() {
-        new LocalNotification().pushNotification({
+        LocalNotification.pushNotification({
             title: 'Local Notification',
             message: 'Local Notification Button Is Pressed',
         });
     }
 
     getFCMToken() {
-        new FCMService().getToken(() => {
+        FCMService.getToken(() => {
             ToastAndroid.showWithGravityAndOffset('See Token On Console', ToastAndroid.LONG, ToastAndroid.BOTTOM, 25, 50);
         });
     }
